@@ -20,22 +20,6 @@ def isSafe(bo, num, pos):
 
     return True
 
-def findUnassignedPosition():
-    for i in range(0,9):
-        for j in range(0,9):
-            if(sudokuTable[i][j] == 0):
-                return (i,j)
-    return None
-def solveSudoku():
-    find = findUnassignedPosition()
-    if(find == None):
-        return True
-    row,col = find[0],find[1]
-    print(row,col)
-    for num in range(1,10):
-        if(isSafe(sudokuTable,row,col,num)):
-            sudokuTable[row][col] = num
-            if(solveSudoku()):
-                return True
-            sudokuTable[row][col] = 0
-    return False
+
+def isValueValid(num):
+    return num >= 1 and num <=9
