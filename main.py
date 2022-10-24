@@ -185,7 +185,7 @@ def randomMode():
     displayTable()
 
 def main():
-    global headerLabel,easyButton,mediumButton,hardButton
+    global headerLabel,easyButton,mediumButton,hardButton,randomButton
     headerLabel = Label(tk, text = "Choose difficulty !!!")
     easyButton = Button(tk,text = "Easy",command = easyMode)
     mediumButton = Button(tk,text = "Medium",command = mediumMode)
